@@ -6,11 +6,17 @@ public final class ShakePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        // Сохранение конфигурации по умолчанию (если есть config.yml)
+        saveDefaultConfig();
+
+        getServer().getMessenger().registerOutgoingPluginChannel(this, ShakeCommand.CHANNEL);
+        getCommand("shake").setExecutor(new ShakeCommand(this));
+
+        getLogger().info("ShakePlugin enabled!");
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        getLogger().info("ShakePlugin disabled!");
     }
 }

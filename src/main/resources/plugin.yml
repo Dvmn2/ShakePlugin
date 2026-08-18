@@ -6,3 +6,13 @@ api-version: '1.21.11'
 load: POSTWORLD
 
 authors: [ DVMN2 ]
+
+commands:
+  shake:
+    description: Трясёт камеру игрока
+    usage: /shake <player> [сила] [продолжительность]
+
+permissions:
+  shake.admin:
+    description: Доступ к тряске
+    default: op
