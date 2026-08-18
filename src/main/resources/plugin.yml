@@ -1,0 +1,8 @@
+name: ShakePlugin
+version: '1.0.0'
+
+main: net.dvmn2.shakePlugin.ShakePlugin
+api-version: '1.21.11'
+load: POSTWORLD
+
+authors: [ DVMN2 ]
