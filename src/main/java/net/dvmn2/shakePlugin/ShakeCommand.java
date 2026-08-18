@@ -94,7 +94,7 @@ public class ShakeCommand implements CommandExecutor, TabCompleter {
             if (playersNames.isEmpty()) {
                 playersNames.append(player.getName());
             } else {
-                playersNames.append(", ").append(player.getName());
+                playersNames.append(", ").append(player.getName()); //
             }
         }
 
