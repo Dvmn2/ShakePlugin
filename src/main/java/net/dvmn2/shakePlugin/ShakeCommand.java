@@ -20,8 +20,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class ShakeCommand implements CommandExecutor, TabCompleter {
-    // ВАЖНО: должно совпадать с net.dvmn2.bmcmod.client.shake.CameraShakePayload.ID в моде
-    public static final String CHANNEL = "bmcmod:shake";
+    // ВАЖНО: должно совпадать в моде
+    public static final String CHANNEL = "shakemod:shake";
 
     // Значения по умолчанию, если аргументы силы/продолжительности не переданы
     private static final int DEFAULT_INTENSITY = 1;
