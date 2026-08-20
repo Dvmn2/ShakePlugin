@@ -1,5 +1,5 @@
 name: ShakePlugin
-version: '1.0.0'
+version: '1.1.0'
 
 main: net.dvmn2.shakePlugin.ShakePlugin
 api-version: '1.21.11'
@@ -7,12 +7,7 @@ load: POSTWORLD
 
 authors: [ DVMN2 ]
 
-commands:
-  shake:
-    description: Трясёт камеру игрока
-    usage: /shake <player> [интенсивность] [сила] [продолжительность]
-
 permissions:
-  shake.admin:
-    description: Доступ к тряске
+  scan.admin:
+    description: Доступ к сканированию
     default: op

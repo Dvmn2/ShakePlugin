@@ -6,13 +6,17 @@ public final class ShakePlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Сохранение конфигурации по умолчанию (если есть config.yml)
         saveDefaultConfig();
 
         getServer().getMessenger().registerOutgoingPluginChannel(this, ShakeCommand.CHANNEL);
-        getCommand("shake").setExecutor(new ShakeCommand(this));
 
-        getLogger().info("ShakePlugin enabled!");
+        getLifecycleManager().registerEventHandler(
+                io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents.COMMANDS,
+                event -> event.registrar().register(
+                        ShakeCommand.create(this),
+                        "Трясёт камеру игрока"
+                )
+        );
     }
 
     @Override
